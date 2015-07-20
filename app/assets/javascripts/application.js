@@ -12,12 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery-ui
+//= require jquery.fullPage
+//= require jquery.simple-text-rotator
 //= require_tree .
 //= require materialize-sprockets
 
- $(document).ready(function(){
+ $(document).ready(function() {
+    $('#fullpage').fullpage({
+                sectionsColor: ['#ffa726', '#42a5f5', '#90a4ae', '#ccddff'],
+                scrollingSpeed: 1000
+            });
 
-     $(".button-collapse").sideNav();
 
+    $(".rotate").textrotator({
+                animation: "dissolve",
+                separator: ",",
+                speed: 3000
+        });
  })
